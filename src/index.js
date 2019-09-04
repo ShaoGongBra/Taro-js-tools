@@ -1,5 +1,9 @@
 import { dateAdd, dateDiff, dateToStr} from './date'
 import { gcjEncrypt, gcjDecrypt, gcjDecryptExact, bdEncrypt, bdDecrypt, distance} from './gps'
+import verify from './verify'
+import { get as getGlobalData, set as setGlobalData } from './global-data'
+import nav from './nav'
+import { randomString, phoneHiding } from './string'
 
 export {
   dateAdd,
@@ -11,5 +15,15 @@ export {
   gcjDecryptExact,
   bdEncrypt,
   bdDecrypt,
-  distance
+  distance,
+
+  verify,
+
+  getGlobalData,
+  setGlobalData,
+
+  nav,
+
+  randomString,
+  phoneHiding
 }
