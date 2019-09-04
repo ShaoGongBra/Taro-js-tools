@@ -1,0 +1,15 @@
+{
+   "name": "js-tools",
+   "version": "1.0.0",
+   "private": true,
+   "description": "",
+   "scripts": {},
+   "author": "908634674@qq.com",
+   "license": "MIT",
+   "dependencies": {
+      
+   },
+   "devDependencies": {
+      
+   }
+}
