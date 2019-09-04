@@ -35,6 +35,24 @@ export default (data,verify) => {
               return false
           }
           break
+        case 'tel':
+          if(!/^(\(\d{3,4}-)|\d{3.4}-)?\d{7,8}$/.test(data[key])){
+              Taro.showToast({
+                title: verify[key].errMsg || key+'不是正确的电话号码',
+                icon: 'none'
+              })
+              return false
+          }
+          break
+        case 'email':
+          if(!/^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/.test(data[key])){
+              Taro.showToast({
+                title: verify[key].errMsg || key+'不是正确的邮箱地址',
+                icon: 'none'
+              })
+              return false
+          }
+          break
         case 'money':
           if(!/^(([1-9][0-9]*)|(([0]\.\d{1,2}|[1-9][0-9]*\.\d{1,2})))$/.test(data[key])){
               Taro.showToast({
