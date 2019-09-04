@@ -1,6 +1,6 @@
 /**
  * 日期对象转换为指定格式的字符串
- * @param f 日期格式,格式定义如下 yyyy-MM-dd HH:mm:ss
+ * @param formatStr 日期格式,格式定义如下 yyyy-MM-dd HH:mm:ss
  * @param date Date日期对象或者时间戳或者带毫秒的时间戳, 如果缺省，则为当前时间
  *
  * YYYY/yyyy/YY/yy 表示年份  
