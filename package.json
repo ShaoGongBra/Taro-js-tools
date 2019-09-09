@@ -19,10 +19,10 @@
   "bugs": {
     "url": "https://github.com/ShaoGongBra/Taro-js-tools/issues"
   },
-  "homepage": "https://github.com/ShaoGongBra/Taro-js-tools#readme",
+  "homepage": "https://github.com/ShaoGongBra/Taro-js-tools",
   "main": "index.js",
   "directories": {
-    "example": "example"
+    
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
