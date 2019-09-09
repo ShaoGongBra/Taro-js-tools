@@ -7,22 +7,20 @@ js工具库，支持日期函数、gps转换函数、表单验证函数、导航
 > yarn add taro-js-tools
 
 ### 日期函数
-`
-import { 
-  dateToStr,
-  dateDiff,
-  dateAdd,
-  isLeapYear,
-  strToDate,
-  strFormatToDate,
-  dateToLong,
-  longToDate,
-  isDate,
-  getMaxDay,
-  maxDayOfDate,
-  datePart
-} from 'react-native-text-radius/date'
-`
+> import { 
+>   dateToStr,
+>   dateDiff,
+>   dateAdd,
+>   isLeapYear,
+>   strToDate,
+>   strFormatToDate,
+>   dateToLong,
+>   longToDate,
+>   isDate,
+>   getMaxDay,
+>   maxDayOfDate,
+>   datePart
+> } from 'react-native-text-radius/date'
 ### 路由
 `
 import nav from 'react-native-text-radius/nav'
