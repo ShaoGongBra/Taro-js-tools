@@ -57,6 +57,5 @@ export default (url,data) => {
   let opt = getOption(url,data)
   Taro[opt.type]({
     ...opt.type == 'navigateBack'?{delta: opt.delta}:{url: opt.url}
-    
   })
 }
