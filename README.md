@@ -3,9 +3,9 @@ js工具库，支持日期函数、gps转换函数、表单验证函数、导航
 
 ## 使用方法
 `
-npm install taro-js-tools
-or
-yarn add taro-js-tools
+> npm install taro-js-tools
+> or
+> yarn add taro-js-tools
 `
 
 ### 日期函数
