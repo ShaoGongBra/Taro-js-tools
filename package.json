@@ -1,20 +1,30 @@
 {
-   "name": "taro-js-tools",
-   "version": "1.0.0",
-   "private": true,
-   "description": "Taro Js工具库",
-   "author": "shaogong <908634674@qq.com>",
-   "license": "MIT",
-   "repository": {
-      "type": "git",
-      "url": "https://github.com/ShaoGongBra/Taro-js-tools"
-   },
-   "keywords": [
-      "Taro",
-      "React",
-      "小程序",
-      "H5"
-   ],
-   "dependencies": {},
-   "devDependencies": {}
+  "name": "taro-js-tools",
+  "version": "1.0.0",
+  "description": "Taro Js工具库",
+  "author": "shaogong <908634674@qq.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShaoGongBra/Taro-js-tools.git"
+  },
+  "keywords": [
+    "Taro",
+    "React",
+    "小程序",
+    "H5"
+  ],
+  "dependencies": {},
+  "devDependencies": {},
+  "bugs": {
+    "url": "https://github.com/ShaoGongBra/Taro-js-tools/issues"
+  },
+  "homepage": "https://github.com/ShaoGongBra/Taro-js-tools#readme",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
 }
