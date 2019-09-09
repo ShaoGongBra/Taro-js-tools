@@ -27,14 +27,14 @@ const delta = (lat, lon) => {
   let sqrtMagic = Math.sqrt(magic);
   dLat = (dLat * 180.0) / ((a * (1 - ee)) / (magic * sqrtMagic) * PI);
   dLon = (dLon * 180.0) / (a / sqrtMagic * Math.cos(radLat) * PI);
-  return {lat: dLat, lon: dLon};
+  return { lat: dLat, lon: dLon };
 }
 
-const outOfChina = (lat, lon) =>  {
+const outOfChina = (lat, lon) => {
   if (lon < 72.004 || lon > 137.8347)
-      return true;
+    return true;
   if (lat < 0.8293 || lat > 55.8271)
-      return true;
+    return true;
   return false;
 }
 
@@ -47,19 +47,19 @@ const outOfChina = (lat, lon) =>  {
 //WGS-84 to GCJ-02
 export const gcjEncrypt = (wgsLat, wgsLon) => {
   if (outOfChina(wgsLat, wgsLon))
-      return {lat: wgsLat, lon: wgsLon};
+    return { lat: wgsLat, lon: wgsLon };
 
   let d = delta(wgsLat, wgsLon);
-  return {lat : wgsLat + d.lat,lon : wgsLon + d.lon};
+  return { lat: wgsLat + d.lat, lon: wgsLon + d.lon };
 }
 
 //GCJ-02 to WGS-84
 export const gcjDecrypt = (gcjLat, gcjLon) => {
   if (outOfChina(gcjLat, gcjLon))
-      return {lat: gcjLat, lon: gcjLon};
+    return { lat: gcjLat, lon: gcjLon };
 
   let d = delta(gcjLat, gcjLon);
-  return {lat: gcjLat - d.lat, lon: gcjLon - d.lon};
+  return { lat: gcjLat - d.lat, lon: gcjLon - d.lon };
 }
 
 //GCJ-02 to WGS-84 exactly
@@ -71,30 +71,30 @@ export const gcjDecryptExact = (gcjLat, gcjLon) => {
   let pLat = gcjLat + dLat, pLon = gcjLon + dLon;
   let wgsLat, wgsLon, i = 0;
   while (1) {
-      wgsLat = (mLat + pLat) / 2;
-      wgsLon = (mLon + pLon) / 2;
-      let tmp = gcjEncrypt(wgsLat, wgsLon)
-      dLat = tmp.lat - gcjLat;
-      dLon = tmp.lon - gcjLon;
-      if ((Math.abs(dLat) < threshold) && (Math.abs(dLon) < threshold))
-          break;
+    wgsLat = (mLat + pLat) / 2;
+    wgsLon = (mLon + pLon) / 2;
+    let tmp = gcjEncrypt(wgsLat, wgsLon)
+    dLat = tmp.lat - gcjLat;
+    dLon = tmp.lon - gcjLon;
+    if ((Math.abs(dLat) < threshold) && (Math.abs(dLon) < threshold))
+      break;
 
-      if (dLat > 0) pLat = wgsLat; else mLat = wgsLat;
-      if (dLon > 0) pLon = wgsLon; else mLon = wgsLon;
+    if (dLat > 0) pLat = wgsLat; else mLat = wgsLat;
+    if (dLon > 0) pLon = wgsLon; else mLon = wgsLon;
 
-      if (++i > 10000) break;
+    if (++i > 10000) break;
   }
-  return {lat: wgsLat, lon: wgsLon};
+  return { lat: wgsLat, lon: wgsLon };
 }
 
 //GCJ-02 to BD-09
 export const bdEncrypt = (gcjLat, gcjLon) => {
-    let x = gcjLon, y = gcjLat;
-    let z = Math.sqrt(x * x + y * y) + 0.00002 * Math.sin(y * x_pi);
-    let theta = Math.atan2(y, x) + 0.000003 * Math.cos(x * x_pi);
-    let bdLon = z * Math.cos(theta) + 0.0065;
-    let bdLat = z * Math.sin(theta) + 0.006;
-    return {lat : bdLat,lon : bdLon};
+  let x = gcjLon, y = gcjLat;
+  let z = Math.sqrt(x * x + y * y) + 0.00002 * Math.sin(y * x_pi);
+  let theta = Math.atan2(y, x) + 0.000003 * Math.cos(x * x_pi);
+  let bdLon = z * Math.cos(theta) + 0.0065;
+  let bdLat = z * Math.sin(theta) + 0.006;
+  return { lat: bdLat, lon: bdLon };
 }
 
 //BD-09 to GCJ-02
@@ -104,7 +104,7 @@ export const bdDecrypt = (bdLat, bdLon) => {
   let theta = Math.atan2(y, x) - 0.000003 * Math.cos(x * x_pi);
   let gcjLon = z * Math.cos(theta);
   let gcjLat = z * Math.sin(theta);
-  return {lat : gcjLat, lon : gcjLon};
+  return { lat: gcjLat, lon: gcjLon };
 }
 
 // 计算两点之间的距离

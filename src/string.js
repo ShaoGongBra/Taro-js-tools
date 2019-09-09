@@ -8,7 +8,7 @@ export const randomString = len => {
   var maxPos = $chars.length;
   var pwd = '';
   for (let i = 0; i < len; i++) {
-     pwd += $chars.charAt(Math.floor(Math.random() * maxPos));
+    pwd += $chars.charAt(Math.floor(Math.random() * maxPos));
   }
   return pwd;
 }
@@ -20,8 +20,8 @@ export const randomString = len => {
 export const phoneHiding = tel => {
   tel = String(tel)
   tel = tel.split('')
-  for(let i = 3; i < 7;i++){
-     tel[i] = '*'
+  for (let i = 3; i < 7; i++) {
+    tel[i] = '*'
   }
   return tel.join('')
 }
