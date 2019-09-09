@@ -23,8 +23,8 @@ js工具库，支持日期函数、gps转换函数、表单验证函数、导航
 > } from 'react-native-text-radius/date'    
 # 路由
 `
-import nav from 'react-native-text-radius/nav'
-nav('/pages/index/index')
+import nav from 'react-native-text-radius/nav'    
+nav('/pages/index/index')    
 `
 # 表单验证
 `
