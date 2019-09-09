@@ -2,14 +2,19 @@
    "name": "taro-js-tools",
    "version": "1.0.0",
    "private": true,
-   "description": "",
-   "scripts": {},
-   "author": "908634674@qq.com",
+   "description": "Taro Js工具库",
+   "author": "shaogong <908634674@qq.com>",
    "license": "MIT",
-   "dependencies": {
-      
+   "repository": {
+      "type": "git",
+      "url": "https://github.com/ShaoGongBra/Taro-js-tools"
    },
-   "devDependencies": {
-      
-   }
+   "keywords": [
+      "Taro",
+      "React",
+      "小程序",
+      "H5"
+   ],
+   "dependencies": {},
+   "devDependencies": {}
 }
