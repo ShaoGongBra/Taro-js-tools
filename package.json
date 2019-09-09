@@ -1,6 +1,6 @@
 {
   "name": "taro-js-tools",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Taro Js工具库",
   "author": "shaogong <908634674@qq.com>",
   "license": "MIT",
@@ -20,7 +20,7 @@
     "url": "https://github.com/ShaoGongBra/Taro-js-tools/issues"
   },
   "homepage": "https://github.com/ShaoGongBra/Taro-js-tools",
-  "main": "index.js",
+  "main": "lib/index.js",
   "directories": {
     
   },
